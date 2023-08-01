@@ -3,8 +3,8 @@ import Head from "../components/Head";
 
 // /*imports react */
 
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { useEffect, useMemo, useState } from "react";
+import {  useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 /*imports libs */
 import { ToastContainer, toast } from "react-toastify";
