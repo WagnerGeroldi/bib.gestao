@@ -1,0 +1,10 @@
+.fa {
+    color: blue;
+}
+
+
+.error-message {
+    color: blue;
+    font-weight: bold;
+    font-size: small;
+  }
