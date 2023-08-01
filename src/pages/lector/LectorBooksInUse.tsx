@@ -1,7 +1,7 @@
 import Drawer from "../components/Drawer";
 import Head from "../components/Head";
 
-/*imports react */
+// /*imports react */
 
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
@@ -15,37 +15,37 @@ import { api } from "../../api/api";
 /*imports styles CSS */
 import "react-toastify/dist/ReactToastify.css";
 
-/*imports MUI */
+// /*imports MUI */
 import Paper from "@mui/material/Paper";
-import { Button, IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
-import AddIcon from "@mui/icons-material/Add";
-import ClearIcon from "@mui/icons-material/Clear";
-import { HandleOnlyDate } from "../services/HandleOnlyDate";
+// // import { Button, IconButton } from "@mui/material";
+// // import DeleteIcon from "@mui/icons-material/Delete";
+// // import EditIcon from "@mui/icons-material/Edit";
+// // import AddIcon from "@mui/icons-material/Add";
+// // import ClearIcon from "@mui/icons-material/Clear";
+// // import { HandleOnlyDate } from "../services/HandleOnlyDate";
 
 export default function LectorBooksInUse(this: any) {
   const { id } = useParams() as { id: string };
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+//   const [loading, setLoading] = useState(true);
+//   // const navigate = useNavigate();
   const [lector, setLector] = useState([] as any);
-  const [idLector, setIdLector] = useState("");
-  const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
+//   // const [idLector, setIdLector] = useState("");
+//   const [open, setOpen] = useState(false);
+//   const handleClose = () => setOpen(false);
 
-  const handleClickOpen = (id: string) => {
-    setIdLector(id);
-    setOpen(true);
-  };
+//   // const handleClickOpen = (id: string) => {
+//   //   setIdLector(id);
+//   //   setOpen(true);
+//   // };
 
-  /*Consultas BACKEND */
+//   /*Consultas BACKEND */
 
   useEffect(() => {
     api
       .get("/lector/" + id, {})
       .then((res) => {
         setLector(res.data);
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((err) => {
         toast.error(err.response.data.message);
